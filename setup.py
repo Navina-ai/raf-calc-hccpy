@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(packages=find_packages(),
     name="hccpy-navina",
-    version="0.2.1",
+    version="0.2.2",
     description="hccpy_navina navina fork",
     long_description=long_description,
     long_description_content_type="text/markdown",
