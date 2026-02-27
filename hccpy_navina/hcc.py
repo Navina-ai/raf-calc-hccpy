@@ -1,17 +1,17 @@
 import numpy as np
 import re
 from collections import Counter
-import hccpy.utils as utils
-import hccpy._V22I0ED2 as V22I0ED2 # age sex edits (v22, v23, v24)
-import hccpy._V28I0ED1 as V28I0ED1 # age sex edits (v28)
-import hccpy._V2218O1M as V2218O1M # interactions (v22)
-import hccpy._V2318P1M as V2318P1M # interactions (v23)
-import hccpy._V2419P1M as V2419P1M # interactions (v24)
-import hccpy._V2823T2M as V2823T2M # interactions (v28)
-import hccpy._E2118P1M as E2118P1M # interactions (ESRD)
-import hccpy._AGESEXV2 as AGESEXV2 # disabled/origds (v22, v23, v24, v28)
-import hccpy._V2218O1P as V2218O1P # risk coefn (v22, v23, v24, v28)
-import hccpy._E2118P1P as E2118P1P # risk coefn for ESRD
+import hccpy_navina.utils as utils
+import hccpy_navina._V22I0ED2 as V22I0ED2 # age sex edits (v22, v23, v24)
+import hccpy_navina._V28I0ED1 as V28I0ED1 # age sex edits (v28)
+import hccpy_navina._V2218O1M as V2218O1M # interactions (v22)
+import hccpy_navina._V2318P1M as V2318P1M # interactions (v23)
+import hccpy_navina._V2419P1M as V2419P1M # interactions (v24)
+import hccpy_navina._V2823T2M as V2823T2M # interactions (v28)
+import hccpy_navina._E2118P1M as E2118P1M # interactions (ESRD)
+import hccpy_navina._AGESEXV2 as AGESEXV2 # disabled/origds (v22, v23, v24, v28)
+import hccpy_navina._V2218O1P as V2218O1P # risk coefn (v22, v23, v24, v28)
+import hccpy_navina._E2118P1P as E2118P1P # risk coefn for ESRD
 
 
 class HCCEngine:

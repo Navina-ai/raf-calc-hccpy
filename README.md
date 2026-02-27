@@ -59,44 +59,111 @@ Please see some examples below:
 
 ### Importing 
 
-To import the `HCCEngine` class from `hccpy`:  
+To import the `HCCEngine` class from `hccpy`:
 
 ```python
->>> import json
->>> from hccpy.hcc import HCCEngine
->>> he = HCCEngine()
->>> print(he.profile.__doc__)
-Returns the HCC risk profile of a given patient information.
+>> > import json
+>> > from hccpy_navina.hcc import HCCEngine
+>> > he = HCCEngine()
+>> > print(he.profile.__doc__)
+Returns
+the
+HCC
+risk
+profile
+of
+a
+given
+patient
+information.
 
-        Parameters
-        ----------
-        dx_lst : list of str
-                 A list of ICD10 codes for the measurement year.
-        age : int or float
-              The age of the patient.
-        sex : str 
-              The sex of the patient; {"M", "F"}
-        elig : str
-               The eligibility segment of the patient.
-               Allowed values are as follows:
-               - "CFA": Community Full Benefit Dual Aged
-               - "CFD": Community Full Benefit Dual Disabled
-               - "CNA": Community NonDual Aged
-               - "CND": Community NonDual Disabled
-               - "CPA": Community Partial Benefit Dual Aged
-               - "CPD": Community Partial Benefit Dual Disabled
-               - "INS": Long Term Institutional
-               - "NE": New Enrollee
-               - "SNPNE": SNP NE
-        orec: str
-              Original reason for entitlement code.
-              - "0": Old age and survivor's insurance
-              - "1": Disability insurance benefits
-              - "2": End-stage renal disease 
-              - "3": Both DIB and ESRD
-        medicaid: bool
-                  If the patient is in Medicaid or not.
->>>
+Parameters
+----------
+dx_lst: list
+of
+str
+A
+list
+of
+ICD10
+codes
+for the measurement year.
+age: int or float
+The
+age
+of
+the
+patient.
+sex: str
+The
+sex
+of
+the
+patient;
+{"M", "F"}
+elig: str
+The
+eligibility
+segment
+of
+the
+patient.
+Allowed
+values
+are as follows:
+- "CFA": Community
+Full
+Benefit
+Dual
+Aged
+- "CFD": Community
+Full
+Benefit
+Dual
+Disabled
+- "CNA": Community
+NonDual
+Aged
+- "CND": Community
+NonDual
+Disabled
+- "CPA": Community
+Partial
+Benefit
+Dual
+Aged
+- "CPD": Community
+Partial
+Benefit
+Dual
+Disabled
+- "INS": Long
+Term
+Institutional
+- "NE": New
+Enrollee
+- "SNPNE": SNP
+NE
+orec: str
+Original
+reason
+for entitlement code.
+  - "0": Old
+age and survivor
+'s insurance
+- "1": Disability
+insurance
+benefits
+- "2": End - stage
+renal
+disease
+- "3": Both
+DIB and ESRD
+medicaid: bool
+If
+the
+patient is in Medicaid or not.
+>> >
 ```
 
 ### HCC-Profiling a Member with Diagnosis Codes
@@ -144,8 +211,8 @@ To get a HCC profile from a list of diagnosis codes (in ICD-10):
 Please use "V28" when initializing the engine.
 
 ```python
->>> from hccpy.hcc import HCCEngine
->>> he = HCCEngine("28")
+>> > from hccpy_navina.hcc import HCCEngine
+>> > he = HCCEngine("28")
 ```
 
 Also, see the `test_v23()` examples in `tests/hcc_tests.py`.
@@ -171,13 +238,14 @@ You can overwrite these parameters. For example, this setting below would not ad
 HCCEngine(version="28", cif = 0, norm_params={"C": 1})
 ```
 
-To see the adjusted risk scores, 
+To see the adjusted risk scores,
+
 ```python
->>> from hccpy.hcc import HCCEngine
->>> he = HCCEngine("28")
->>> rp = he.profile(["E1169", "I5030", "I509", "I211", "I209", "R05"],
-                    age=70, sex="M", elig="CNA") 
->>> rp["risk_score_adj"]
+>> > from hccpy_navina.hcc import HCCEngine
+>> > he = HCCEngine("28")
+>> > rp = he.profile(["E1169", "I5030", "I509", "I211", "I209", "R05"],
+                     age=70, sex="M", elig="CNA")
+>> > rp["risk_score_adj"]
 ```
 
 Also, see the `test_norm_factors()` examples in `tests/hcc_tests.py`.
@@ -274,14 +342,14 @@ NOTE: This function uses CPT codes, and this requires [AMA CPT license](https://
 Once you carefully review the license, you need to download [a data file](https://www.cms.gov/Medicare/Health-Plans/MedicareAdvtgSpecRateStats/Downloads/2019-Medicare-CPT-HCPC-List.zip).
 
 ```python
->>> from hccpy.raeligible import RAEligible
->>> rae = RAEligible()
->>> rae.load(fn="CY2019Q2_CPTHCPCS_CMS_20190425.csv")
->>> rae.is_eligible(pr_lst=["C5271"])
+>> > from hccpy_navina.raeligible import RAEligible
+>> > rae = RAEligible()
+>> > rae.load(fn="CY2019Q2_CPTHCPCS_CMS_20190425.csv")
+>> > rae.is_eligible(pr_lst=["C5271"])
 True
->>> rae.is_eligible(pr_lst=["C5270"])
+>> > rae.is_eligible(pr_lst=["C5270"])
 False
->>>
+>> >
 ```
 NOTE: The data file (`CY2019Q2_CPTHCPCS_CMS_20190425.csv`) should be located in the same folder.
 

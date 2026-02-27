@@ -1,10 +1,10 @@
 import numpy as np
 from collections import Counter
-import hccpy.utils_hhs as utils
-import hccpy._AGESEXV6 as AGESEXV6 # age/sex variables
-import hccpy._I0V05ED2 as I0V05ED2 # age/sex edits
-import hccpy._V0519F3M as V0519F3M # interactions
-import hccpy._V0519F3P as V0519F3P # risk coefn 
+import hccpy_navina.utils_hhs as utils
+import hccpy_navina._AGESEXV6 as AGESEXV6 # age/sex variables
+import hccpy_navina._I0V05ED2 as I0V05ED2 # age/sex edits
+import hccpy_navina._V0519F3M as V0519F3M # interactions
+import hccpy_navina._V0519F3P as V0519F3P # risk coefn
 
 class HHSHCCEngine:
 

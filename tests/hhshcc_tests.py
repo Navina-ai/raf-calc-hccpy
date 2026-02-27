@@ -1,6 +1,6 @@
 import unittest
 import numpy as np
-from hccpy.hhshcc import HHSHCCEngine
+from hccpy_navina.hhshcc import HHSHCCEngine
 
 
 class TestHHSHCCEngine(unittest.TestCase):
