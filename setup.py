@@ -4,9 +4,9 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(packages=find_packages(),
-    name="hccpy",
-    version="0.1.9",
-    description="hccpy is a Python implementation of HCC",
+    name="hccpy-navina",
+    version="0.2.0",
+    description="hccpy navina fork",
     long_description=long_description,
     long_description_content_type="text/markdown",
     author="Yubin Park",
