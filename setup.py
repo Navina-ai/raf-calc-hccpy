@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(packages=find_packages(),
     name="hccpy-navina",
-    version="0.2.2",
+    version="0.2.3",
     description="hccpy_navina navina fork",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -15,8 +15,7 @@ setup(packages=find_packages(),
     license="Apache 2.0", 
     install_requires = ["numpy"],
     include_package_data=True,
-    package_dirc={"": "hccpy_navina"},
-    package_data={"data": ["*.TXT", "*.csv", "*.json"]},
+    package_data={"hccpy_navina": ["data/*.TXT", "data/*.txt", "data/*.csv", "data/*.json"]},
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: Apache Software License",
