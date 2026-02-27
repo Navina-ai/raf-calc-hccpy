@@ -1,6 +1,6 @@
 import unittest
 import numpy as np
-from hccpy.raeligible import RAEligible
+from hccpy_navina.raeligible import RAEligible
 
 
 class TestRAEligible(unittest.TestCase):
