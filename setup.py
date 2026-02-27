@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(packages=find_packages(),
-    name="hccpy_navina-navina",
+    name="hccpy-navina",
     version="0.2.0",
     description="hccpy_navina navina fork",
     long_description=long_description,
